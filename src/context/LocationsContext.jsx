@@ -8,7 +8,8 @@ export const LocationsProvider = ({ children }) => {
 
     useEffect(() => {
 
-        const url = 'datas/logements.json'
+        const BASE_URL = 'http://localhost:3000'
+        const url = `${BASE_URL}/datas/logements.json`
 
         async function fetchLocations() {
             try {
