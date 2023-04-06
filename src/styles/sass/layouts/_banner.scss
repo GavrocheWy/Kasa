@@ -12,6 +12,12 @@
     overflow: hidden;
     position: relative;
 
+    @include only-mobile {
+        padding: em-calc(25);
+        min-height: em-calc(100);
+        border-radius: em-calc(10);
+    }
+
     &::after {
         content: "";
         position: absolute;
@@ -28,5 +34,9 @@
         color: $white;
         position: relative;
         z-index: 1;
+
+        @include only-mobile {
+            font-size: 1.5em;
+        }
     }
 }

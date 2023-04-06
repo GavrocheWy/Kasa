@@ -1,7 +1,5 @@
 .collabsible {
 
-    cursor: pointer;
-
     &--title {
         background-color: $primary-color;
         color: $white;
@@ -15,8 +13,14 @@
         justify-content: space-between;
         gap: em-calc(20);
         user-select: none;
+        cursor: pointer;
+
+        @include only-mobile {
+            font-size: 1.1em;
+        }
 
         & .collabsible--toggler {
+            cursor: pointer;
             width: em-calc(20);
             font-size: 1em;
             border: none;

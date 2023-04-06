@@ -4,16 +4,33 @@
     justify-content: center;
     flex-direction: column;
     flex: 1;
+    text-align: center;
 
     &--err {
         font-size: 15em;
         font-weight: 700;
         color: $primary-color;
+
+        @include under-tablet {
+            font-size: 10em;
+        }
+
+        @include only-mobile {
+            font-size: 5em;
+        }
     }
 
     &--txt {
         font-weight: $reg-text-weight;
         color: $primary-color;
+
+        @include under-tablet {
+            font-size: 2em;
+        }
+
+        @include only-mobile {
+            font-size: 1em;
+        }
     }
 
     &--link {

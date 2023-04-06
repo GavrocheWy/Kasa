@@ -13,6 +13,8 @@
 
     @include only-mobile {
         grid-template-columns: 1fr;
+        margin-top: em-calc(30);
+        padding: em-calc(10) em-calc(20);
     }
 }
 
@@ -37,12 +39,25 @@
     transform: scale(1);
     transition: all 0.2s ease;
 
+    @include only-mobile {
+        grid-template-columns: 1fr;
+    }
+
     &:hover {
         transform: scale(1.015);
         transition: all 0.2s ease;
+
+        @include only-mobile {
+            transform: scale(1);
+        }
+
         &::after {
             opacity: 0.5;
             transition: all 0.2s ease;
+
+            @include only-mobile {
+                opacity: 1;
+            }
         }
     }
 

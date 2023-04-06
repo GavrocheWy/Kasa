@@ -23,11 +23,11 @@ export const displayNotation = (note) => {
         const noteNode = []
 
         for (let i = 0; i < note; i++) {
-            noteNode.push(<span key={`filled-star-${i}`} className='location__infos-notation-star filled'><StarShape /></span>)
+            noteNode.push(<span key={`filled-star-${i}`} className='location__head-hostinfos--notation-star filled'><StarShape /></span>)
         }
 
         for (let i = 0; i < (5 - note); i++) {
-            noteNode.push(<span key={`star-${i}`} className='location__infos-notation-star'><StarShape /></span>)
+            noteNode.push(<span key={`star-${i}`} className='location__head-hostinfos--notation-star'><StarShape /></span>)
         }
 
         return noteNode
