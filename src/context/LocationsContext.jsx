@@ -10,8 +10,6 @@ export const LocationsProvider = ({ children }) => {
 
         const url = 'datas/logements.json'
 
-        console.log(url)
-
         async function fetchLocations() {
             try {
                 const res = await fetch(url, {

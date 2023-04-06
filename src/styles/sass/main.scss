@@ -14,8 +14,10 @@
 @import "./layouts/wrappers";
 
 // Components
-@import "./components/locations";
+@import "./components/collabsible";
 
 // Pages
 @import './pages/error-page';
-@import './pages/about-page'
+@import './pages/about-page';
+@import "./pages/location-page";
+@import "./pages/locations-page";

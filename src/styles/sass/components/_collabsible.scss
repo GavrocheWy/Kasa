@@ -1,0 +1,65 @@
+.collabsible {
+
+    cursor: pointer;
+
+    &--title {
+        background-color: $primary-color;
+        color: $white;
+        font-weight: $reg-text-weight;
+        font-size: 1.3em;
+        padding: em-calc(10) em-calc(15);
+        border-radius: em-calc(5);
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        gap: em-calc(20);
+        user-select: none;
+
+        & .collabsible--toggler {
+            width: em-calc(20);
+            font-size: 1em;
+            border: none;
+            background-color: transparent;
+            transform: rotate(0deg);
+            transition: all 0.2s ease;
+
+            & svg {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                fill: $white;
+            }
+        }
+    }
+
+    &--content {
+        background-color: $light-grey;
+        transform: translateY(em-calc(-10));
+        padding: em-calc(0) em-calc(15) em-calc(0) em-calc(15);
+        font-size: 1em;
+        color: $primary-color;
+        border-radius: em-calc(5);
+        max-height: 0px;
+        overflow: hidden;
+        transition: all 0.2s ease;
+        line-height: 1.75em;
+
+        &-elt {
+            display: block;
+        }
+    }
+}
+
+.collabsible.is-open {
+    & .collabsible--content {
+        padding: em-calc(30) em-calc(15) em-calc(15) em-calc(15);
+        max-height: em-calc(500);
+        transition: all 0.2s ease;
+    }
+
+    & .collabsible--toggler {
+        transform: rotate(180deg);
+        transition: all 0.2s ease;
+    }
+}
