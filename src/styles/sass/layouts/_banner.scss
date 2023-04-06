@@ -1,0 +1,31 @@
+.banner {
+    background-color: $primary-color;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: em-calc(100);
+    border-radius: em-calc(25);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        background-color: rgba($color: #000000, $alpha: 0.3);
+    }
+
+    &--text {
+        font-size: 2.75em;
+        font-weight: $reg-text-weight;
+        color: $white;
+        position: relative;
+        z-index: 1;
+    }
+}

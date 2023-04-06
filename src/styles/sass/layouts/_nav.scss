@@ -1,0 +1,36 @@
+.nav {
+    display: flex;
+    align-items: center;
+    padding: em-calc(65) em-calc(40);
+}
+
+.nav__logo {
+    height: em-calc(65);
+
+    & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: em-calc(50);
+    font-size: $medium-text-size;
+    list-style: none;
+    color: $primary-color;
+
+    &--item {
+        &-link {
+            color: inherit;
+            text-decoration: none;
+
+            &.active {
+                text-decoration: underline;
+            }
+        }
+    }
+}

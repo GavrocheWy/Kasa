@@ -1,0 +1,21 @@
+.footer {
+    background-color: $black;
+    display: flex;
+    flex-direction: column;
+    gap: em-calc(30);
+    align-items: center;
+    justify-content: center;
+    padding: em-calc(40);
+    color: $white;
+}
+
+.footer__logo {
+    filter: grayscale(1) brightness(5);
+    height: em-calc(50);
+
+    & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}

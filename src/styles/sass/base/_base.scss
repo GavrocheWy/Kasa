@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $text-font;
+}
+
+main {
+    padding: 0px em-calc(40);
+    margin-bottom: em-calc(65);
+    
+    & > p {
+        font-size: 3em;
+        text-transform: uppercase;
+        font-weight: 800;
+        opacity: 0.25;
+    }
+}
