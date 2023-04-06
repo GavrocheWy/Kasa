@@ -5,6 +5,12 @@
   box-sizing: border-box;
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 body {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
@@ -12,17 +18,13 @@ body {
 main {
   padding: 0px 2.3529411765em;
   margin-bottom: 3.8235294118em;
-}
-main > p {
-  font-size: 3em;
-  text-transform: uppercase;
-  font-weight: 800;
-  opacity: 0.25;
+  width: 100%;
 }
 
 .nav {
   display: flex;
   align-items: center;
+  width: 100%;
   padding: 3.8235294118em 2.3529411765em;
 }
 
@@ -61,6 +63,7 @@ main > p {
   justify-content: center;
   padding: 5.8823529412em;
   border-radius: 1.4705882353em;
+  min-height: 14.7058823529em;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -129,6 +132,12 @@ main > p {
   }
 }
 
+.locations-card--link {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
 .locations-card {
   width: 100%;
   aspect-ratio: 1/1;
@@ -141,13 +150,25 @@ main > p {
   justify-content: flex-end;
   position: relative;
   overflow: hidden;
+  transform: scale(1);
+  transition: all 0.2s ease;
+}
+.locations-card:hover {
+  transform: scale(1.015);
+  transition: all 0.2s ease;
+}
+.locations-card:hover::after {
+  opacity: 0.5;
+  transition: all 0.2s ease;
 }
 .locations-card::after {
   content: "";
   position: absolute;
   bottom: 0px;
   left: 0px;
+  opacity: 1;
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  transition: all 0.2s ease;
   height: 100%;
   width: 100%;
 }
@@ -165,6 +186,85 @@ main > p {
   .locations-card--text {
     padding: 0.8823529412em;
   }
+}
+
+.error-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+}
+.error-page--err {
+  font-size: 15em;
+  font-weight: 700;
+  color: #ff6060;
+}
+.error-page--txt {
+  font-weight: 500;
+  color: #ff6060;
+}
+.error-page--link {
+  margin-top: 5.8823529412em;
+  color: #ff6060;
+}
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  padding: 3.8235294118em 7.0588235294em;
+  gap: 1.7647058824em;
+}
+
+.faq-question {
+  cursor: pointer;
+}
+.faq-question--title {
+  background-color: #ff6060;
+  color: white;
+  font-weight: 500;
+  font-size: 1.3em;
+  padding: 0.5882352941em 0.8823529412em;
+  border-radius: 0.2941176471em;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.1764705882em;
+  user-select: none;
+}
+.faq-question--title .faq-question--toggler {
+  width: 1.1764705882em;
+  transform: rotate(0deg);
+  transition: all 0.2s ease;
+}
+.faq-question--title .faq-question--toggler svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  fill: white;
+}
+.faq-question--text {
+  background-color: #F6F6F6;
+  transform: translateY(-0.5882352941em);
+  padding: 0em 0.8823529412em 0em 0.8823529412em;
+  font-size: 1.2em;
+  color: #ff6060;
+  border-radius: 0.2941176471em;
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  line-height: 1.5em;
+}
+
+.faq-question.is-open .faq-question--text {
+  padding: 1.7647058824em 0.8823529412em 0.8823529412em 0.8823529412em;
+  max-height: 29.4117647059em;
+  transition: all 0.2s ease;
+}
+.faq-question.is-open .faq-question--toggler {
+  transform: rotate(180deg);
+  transition: all 0.2s ease;
 }
 
 /*# sourceMappingURL=main.css.map */

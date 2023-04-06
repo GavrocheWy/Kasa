@@ -10,9 +10,15 @@ export const LocationsProvider = ({ children }) => {
 
         const url = 'datas/logements.json'
 
+        console.log(url)
+
         async function fetchLocations() {
             try {
-                const res = await fetch(url)
+                const res = await fetch(url, {
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                })
                 const locationsData = await res.json()
                 setLocations(locationsData)
             }

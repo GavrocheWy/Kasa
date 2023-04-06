@@ -1,4 +1,4 @@
-const Banner = ({ headerBgImg, headerText = 'Lorem ipsum dolor sit amet' }) => {
+const Banner = ({ headerBgImg, headerText }) => {
     return (
         <header style={{backgroundImage: `url(${headerBgImg})`}} className="banner">
             <h1 className="banner--text">{headerText}</h1>

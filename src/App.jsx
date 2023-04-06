@@ -20,9 +20,9 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/a-propos" element={<AboutPage />} />
-            <Route path="/location/:locationId" element={<SingleLocationPage />} />
+            <Route path="/locations/:locationId" element={<SingleLocationPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Route>
-          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </LocationsProvider>
     </React.Fragment>

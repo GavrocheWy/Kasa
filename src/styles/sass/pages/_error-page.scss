@@ -1,0 +1,23 @@
+.error-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+
+    &--err {
+        font-size: 15em;
+        font-weight: 700;
+        color: $primary-color;
+    }
+
+    &--txt {
+        font-weight: $reg-text-weight;
+        color: $primary-color;
+    }
+
+    &--link {
+        margin-top: em-calc(100);
+        color: $primary-color;
+    }
+}
