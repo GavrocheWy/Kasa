@@ -1,7 +1,6 @@
 // Components
 import Slideshow from '../components/Location/Slideshow'
 import Error from '../components/Errors/Error'
-import Loader from '../components/Loading/Loader'
 // Dependencies
 import { useEffect, useState, useContext } from "react"
 import React from 'react'

@@ -76,6 +76,10 @@
     bottom: 5%;
     left: 0px;
     color: $white;
+
+    @include only-mobile {
+        display: none;
+    }
 }
 
 .location__head {

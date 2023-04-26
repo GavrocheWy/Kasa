@@ -354,6 +354,11 @@ main {
   left: 0px;
   color: white;
 }
+@media screen and (max-width: 600px) {
+  .carrousel_pagination {
+    display: none;
+  }
+}
 
 .location__head {
   margin-top: 1.6666666667em;
